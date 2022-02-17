@@ -1,11 +1,12 @@
 $(function(){
     
-    var layer = layui.layer
+    
     getUserInfo()
 
-    
+    var layer = layui.layer
     // 退出按钮
-    $('#btnLogout').on('click',function(){
+    $('#btnLogout').on('click',function(e){
+        e.preventDefault()
         // 提示用户是否确认退出
         layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, function(index) {
             //do something
